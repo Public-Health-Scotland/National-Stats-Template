@@ -18,11 +18,72 @@ To download the necessary files, click on Clone or download -> Download ZIP and 
 Open the Cover_Page.docx file in Word.
 * Save the Cover Page.
   * Press Ctrl + A to select all contents. Go to Insert – Cover Page – Save Selection to Cover Page Gallery. Give it a name (e.g. ISD_Publication_Report) and click OK.
+  
 	![Cover page example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown6.PNG)
+	
   * Save the footer:
   	* Double click on the footer, and select the whole footer like this by pressing Ctrl + A.
+	
 	![Footer example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown2.PNG)
+	
 	* Then go to Insert – Footer – Save Selection to Footer Gallery. Give it a name (e.g. ISD_Publication_Footer) and click OK.
   * Save the VBA macro:
   	* Go to View – Macros – View Macros. Type the macro name you want to save this as (e.g. SetStyleOfTables) and click Create. It will open up the VBA developer window.
 	* Copy the following code to the developer window and click the Save button to save the macro.
+	
+	```vba
+	Sub SetStyleOfAllTablesAndPreserveAlignment()
+	 ' SetStyleOfAllTablesAndPreserveAlignment Macro
+
+	     For Each objTable In ActiveDocument.Tables
+
+		 '******This first section is for recording the old column alignments*****'
+		 numCols = objTable.Columns.Count 'first find the number of columns within the table.
+		 ReDim oldColumnAlignments(numCols) As Integer 'initialize an integer array of length 'numCols'.
+		 column_index = 0
+		 For Each tableColumn In objTable.Columns
+		     oldColumnAlignments(column_index) = tableColumn.Cells(1).Range.ParagraphFormat.Alignment
+		     column_index = column_index + 1
+		 Next tableColumn
+		 '************************************************************************'
+
+
+		 '-------This section changes the styles of the tables to what they should be. -------'
+		 objTable.Style = "ISD_Pubs_Tables"
+		 PreviousBookmarkID = objTable.Range.PreviousBookmarkID
+		 PreviousBookmarkName = ActiveDocument.Range.Bookmarks(PreviousBookmarkID)
+
+		 If PreviousBookmarkName = "glossary" Then
+		     objTable.Style = "Glossary_Style"
+		 End If
+
+		 If PreviousBookmarkName = "tableA" Then 'Change these as needed for each style type!
+		     objTable.Style = "TableA_Style"
+		 End If
+
+		 If PreviousBookmarkName = "tableB" Then
+		     objTable.Style = "TableB_Style"
+		 End If
+
+		 If PreviousBookmarkName = "tableC" Then
+		     objTable.Style = "TableC_Style"
+		 End If
+		 '------------------------------------------------------------------------------------'
+
+
+		 '^^^^This last section sets the alignments of each column of the table to what they were ^^^^'
+		 '^^^^before the style of the table was changed.^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+		 i = 0
+		 For Each tableColumn In objTable.Columns
+		     tableColumn.Select
+		     Selection.ParagraphFormat.Alignment = oldColumnAlignments(i)
+		     i = i + 1
+		 Next tableColumn
+		 '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+
+		 objTable.PreferredWidth = 100 'Sets the Preferred Table width to 100% of the width of the page.
+
+	     Next objTable
+
+	 End Sub
+	```
