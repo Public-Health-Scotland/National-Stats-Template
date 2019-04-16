@@ -2,22 +2,23 @@
 
 Basic R markdown template for producing summary and full report. 
 
-To download the necessary files, click on Clone or download -> Download ZIP and save it to the folder of your choice. 
+To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
 ![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
-* Go to the zip file, right click on it and choose WinZip -> Extract to here
+* Go to the zip file, right click on it and choose *WinZip -> Extract to here*.
 * You should see the files that are below.
 ![Folder example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic2.png)
-	* The ISD-NATIONAL-STATS-REPORT.Rmd file is the RMarkdown file that you open in RStudio, modify as desired, and 	run/knit to create a Word file.  The final Word file will have the exact same name as this file except for the 	extension, which will be .docx.  So in this case, the new file being created will be named ISD-NATIONAL-STATS-REPORT.docx
+	* The ISD-NATIONAL-STATS-REPORT.Rmd file is the **RMarkdown** file that you open in RStudio, modify as desired, and 	run/knit to create a Word file.  The final Word file will have the exact same name as this file except for the 	extension, which will be .docx.  So in this case, the new file being created will be named ISD-NATIONAL-STATS-REPORT.docx
   * The kitemark_tcm97-17949.jpg file is simply this image which RMarkdown will insert into the final MS Word Publications Report template:
   
-  ![Kitemark](https://github.com/NHS-NSS-transforming-publications/RMarkdown_Basic/blob/master/kitemark_tcm97-17949.jpg)
-  *	The ISD-NATIONAL-STATS-REPORT_TEMPLATE.docx file is the file in which you set styles for headings and tables.  The RMarkdown file will import the styles, but not the content of this file. You ideally shouldn’t need to modify this since we’ve already set the styles, but this is the file you would change if you wanted to change them.
+  	![Kitemark](https://github.com/NHS-NSS-transforming-publications/RMarkdown_Basic/blob/master/kitemark_tcm97-17949.jpg)
+	
+  * The ISD-NATIONAL-STATS-REPORT_TEMPLATE.docx file is the file in which you set styles for headings and tables. The RMarkdown file will import the styles, but not the content of this file. You ideally shouldn’t need to modify this since we’ve already set the styles, but this is the file you would change if you wanted to change them.
   *	The Cover_Page.docx file is used to import a custom cover page and a custom footer into the user’s settings.  This file is no longer needed and can be erased after those steps are completed.
 
 ## One-time preparation steps for each user
 Open the Cover_Page.docx file in Word.
 * Save the Cover Page.
-	* Press Ctrl + A to select all contents. Go to Insert – Cover Page – Save Selection to Cover Page Gallery. Give it a name (e.g. ISD_Publication_Report) and click OK.
+	* Press Ctrl + A to select all contents. Go to *Insert – Cover Page – Save Selection to Cover Page Gallery*. Give it a name (e.g. ISD_Publication_Report) and click OK.
   
 	![Cover page example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown6.PNG)
 	
@@ -26,9 +27,10 @@ Open the Cover_Page.docx file in Word.
 	
   	![Footer example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown2.PNG)
 	
-  	* Then go to Insert – Footer – Save Selection to Footer Gallery. Give it a name (e.g. ISD_Publication_Footer) and click OK.
+  	* Then go to *Insert – Footer – Save Selection to Footer Gallery*. Give it a name (e.g. ISD_Publication_Footer) and click OK.
+	
 * Save the VBA macro:
-	* Go to View – Macros – View Macros. Type the macro name you want to save this as (e.g. SetStyleOfTables) and click Create. It will open up the VBA developer window.
+	* Go to *View – Macros – View Macros*. Type the macro name you want to save this as (e.g. SetStyleOfTables) and click Create. It will open up the VBA developer window.
 	* Copy the following code to the developer window and click the Save button to save the macro.
 	
 ```vba
@@ -97,8 +99,8 @@ Sub SetStyleOfAllTablesAndPreserveAlignment()
 When you are changing the RMarkdown template to make the Publication Report that you want to create, you will inevitably have to change many parts of the template.  For instance, you’ll have to change the wording, titles, plots, tables, images, as well as many other parts of the report.  The following two preparation steps are just a reminder to check or modify these things that might easily be overlooked, namely the location of the ‘Rate this Publication’ link and the possible commenting out of the “Early Access for Management Information” and “Early Access for Quality Assurance” sections.
 
 *  Open the ISD-NATIONAL-STATS-REPORT.Rmd file in RStudio.
-	* Determine if notice of “Early Access for Management Information” and “Early Access for Quality Assurance” are needed within your publication report.
-		* In ISD-NATIONAL-STATS-REPORT.Rmd, within Appendix 3 – Early Access Details, not every publication will have the information for “Early Access for Management Information” and “Early Access for Quality Assurance”. So each team should judge for each publication if these sections are needed. If they are not, please comment them out (using Ctrl+Shift+C) within the RMarkdown script so that the text will not show in the final MS Word output.
+	* **Determine if notice of “Early Access for Management Information” and “Early Access for Quality Assurance” are needed within your publication report.**
+		* In ISD-NATIONAL-STATS-REPORT.Rmd, within **Appendix 3 – Early Access Details**, not every publication will have the information for “Early Access for Management Information” and “Early Access for Quality Assurance”. So each team should judge for each publication if these sections are needed. If they are not, please comment them out (using Ctrl+Shift+C) within the RMarkdown script so that the text will not show in the final MS Word output.
 		
 ```
 **Early Access for Management Information**  
