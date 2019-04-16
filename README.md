@@ -100,6 +100,23 @@ When you are changing the RMarkdown template to make the Publication Report that
 	* Determine if notice of “Early Access for Management Information” and “Early Access for Quality Assurance” are needed within your publication report.
 		* In ISD-NATIONAL-STATS-REPORT.Rmd, within Appendix 3 – Early Access Details, not every publication will have the information for “Early Access for Management Information” and “Early Access for Quality Assurance”. So each team should judge for each publication if these sections are needed. If they are not, please comment them out (using Ctrl+Shift+C) within the RMarkdown script so that the text will not show in the final MS Word output.
 		
+```html
+**Early Access for Management Information**  
+These statistics will also have been made available to those who needed access to 'management information', ie as part of the delivery of health and care:
+
+<br>
+
+**Early Access for Quality Assurance**  
+These statistics will also have been made available to those who needed access to help quality assure the publication:
+```
+
+	* Set the location of the 'Rate this publication' link within the RMarkdown file.
+	
+	![Rate publication link](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic3.png)
+	
+		* Just set the location in the code above to wherever the link for rating the publication should go to.
+* Again, these two steps just completed above only have to be performed once per publication, unless something would warrant a change in these areas of the publication in the future.
+
 
 
 
