@@ -17,73 +17,89 @@ To download the necessary files, click on Clone or download -> Download ZIP and 
 ## One-time preparation steps for each user
 Open the Cover_Page.docx file in Word.
 * Save the Cover Page.
-  * Press Ctrl + A to select all contents. Go to Insert – Cover Page – Save Selection to Cover Page Gallery. Give it a name (e.g. ISD_Publication_Report) and click OK.
+	* Press Ctrl + A to select all contents. Go to Insert – Cover Page – Save Selection to Cover Page Gallery. Give it a name (e.g. ISD_Publication_Report) and click OK.
   
 	![Cover page example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown6.PNG)
 	
-  * Save the footer:
-  	* Double click on the footer, and select the whole footer like this by pressing Ctrl + A.
+* Save the footer:
+	* Double click on the footer, and select the whole footer like this by pressing Ctrl + A.
 	
-	![Footer example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown2.PNG)
+  	![Footer example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown2.PNG)
 	
-	* Then go to Insert – Footer – Save Selection to Footer Gallery. Give it a name (e.g. ISD_Publication_Footer) and click OK.
-  * Save the VBA macro:
-  	* Go to View – Macros – View Macros. Type the macro name you want to save this as (e.g. SetStyleOfTables) and click Create. It will open up the VBA developer window.
+  	* Then go to Insert – Footer – Save Selection to Footer Gallery. Give it a name (e.g. ISD_Publication_Footer) and click OK.
+* Save the VBA macro:
+	* Go to View – Macros – View Macros. Type the macro name you want to save this as (e.g. SetStyleOfTables) and click Create. It will open up the VBA developer window.
 	* Copy the following code to the developer window and click the Save button to save the macro.
 	
-	```vba
-	Sub SetStyleOfAllTablesAndPreserveAlignment()
-	 ' SetStyleOfAllTablesAndPreserveAlignment Macro
+```vba
+Sub SetStyleOfAllTablesAndPreserveAlignment()
+ ' SetStyleOfAllTablesAndPreserveAlignment Macro
+ 
+     For Each objTable In ActiveDocument.Tables
+         
+         '******This first section is for recording the old column alignments*****'
+         numCols = objTable.Columns.Count 'first find the number of columns within the table.
+         ReDim oldColumnAlignments(numCols) As Integer 'initialize an integer array of length 'numCols'.
+         column_index = 0
+         For Each tableColumn In objTable.Columns
+             oldColumnAlignments(column_index) = tableColumn.Cells(1).Range.ParagraphFormat.Alignment
+             column_index = column_index + 1
+         Next tableColumn
+         '************************************************************************'
+        
+        
+         '-------This section changes the styles of the tables to what they should be. -------'
+         objTable.Style = "ISD_Pubs_Tables"
+         PreviousBookmarkID = objTable.Range.PreviousBookmarkID
+         PreviousBookmarkName = ActiveDocument.Range.Bookmarks(PreviousBookmarkID)
+         
+         If PreviousBookmarkName = "glossary" Then
+             objTable.Style = "Glossary_Style"
+         End If
+         
+         If PreviousBookmarkName = "tableA" Then 'Change these as needed for each style type!
+             objTable.Style = "TableA_Style"
+         End If
+         
+         If PreviousBookmarkName = "tableB" Then
+             objTable.Style = "TableB_Style"
+         End If
+         
+         If PreviousBookmarkName = "tableC" Then
+             objTable.Style = "TableC_Style"
+         End If
+         '------------------------------------------------------------------------------------'
+         
+         
+         '^^^^This last section sets the alignments of each column of the table to what they were ^^^^'
+         '^^^^before the style of the table was changed.^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+         i = 0
+         For Each tableColumn In objTable.Columns
+             tableColumn.Select
+             Selection.ParagraphFormat.Alignment = oldColumnAlignments(i)
+             i = i + 1
+         Next tableColumn
+         '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+         
+         objTable.PreferredWidth = 100 'Sets the Preferred Table width to 100% of the width of the page.
+         
+     Next objTable
+ 
+ End Sub
+```
 
-	     For Each objTable In ActiveDocument.Tables
+* These three steps of saving the VBA macro, saving the footer, and saving the cover page should only have to be done once ever for each user.  The macro, footer, and cover page should now be associated with the user’s Word setup and not with any particular Word file.  
+* Close the Cover_Page.docx file in Word.
+* Delete the file Cover_Page.docx as this is no longer needed
 
-		 '******This first section is for recording the old column alignments*****'
-		 numCols = objTable.Columns.Count 'first find the number of columns within the table.
-		 ReDim oldColumnAlignments(numCols) As Integer 'initialize an integer array of length 'numCols'.
-		 column_index = 0
-		 For Each tableColumn In objTable.Columns
-		     oldColumnAlignments(column_index) = tableColumn.Cells(1).Range.ParagraphFormat.Alignment
-		     column_index = column_index + 1
-		 Next tableColumn
-		 '************************************************************************'
+## One-time preparation steps for each publication report
 
+When you are changing the RMarkdown template to make the Publication Report that you want to create, you will inevitably have to change many parts of the template.  For instance, you’ll have to change the wording, titles, plots, tables, images, as well as many other parts of the report.  The following two preparation steps are just a reminder to check or modify these things that might easily be overlooked, namely the location of the ‘Rate this Publication’ link and the possible commenting out of the “Early Access for Management Information” and “Early Access for Quality Assurance” sections.
 
-		 '-------This section changes the styles of the tables to what they should be. -------'
-		 objTable.Style = "ISD_Pubs_Tables"
-		 PreviousBookmarkID = objTable.Range.PreviousBookmarkID
-		 PreviousBookmarkName = ActiveDocument.Range.Bookmarks(PreviousBookmarkID)
-
-		 If PreviousBookmarkName = "glossary" Then
-		     objTable.Style = "Glossary_Style"
-		 End If
-
-		 If PreviousBookmarkName = "tableA" Then 'Change these as needed for each style type!
-		     objTable.Style = "TableA_Style"
-		 End If
-
-		 If PreviousBookmarkName = "tableB" Then
-		     objTable.Style = "TableB_Style"
-		 End If
-
-		 If PreviousBookmarkName = "tableC" Then
-		     objTable.Style = "TableC_Style"
-		 End If
-		 '------------------------------------------------------------------------------------'
+*  Open the ISD-NATIONAL-STATS-REPORT.Rmd file in RStudio.
+	* Determine if notice of “Early Access for Management Information” and “Early Access for Quality Assurance” are needed within your publication report.
+		* In ISD-NATIONAL-STATS-REPORT.Rmd, within Appendix 3 – Early Access Details, not every publication will have the information for “Early Access for Management Information” and “Early Access for Quality Assurance”. So each team should judge for each publication if these sections are needed. If they are not, please comment them out (using Ctrl+Shift+C) within the RMarkdown script so that the text will not show in the final MS Word output.
+		
 
 
-		 '^^^^This last section sets the alignments of each column of the table to what they were ^^^^'
-		 '^^^^before the style of the table was changed.^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
-		 i = 0
-		 For Each tableColumn In objTable.Columns
-		     tableColumn.Select
-		     Selection.ParagraphFormat.Alignment = oldColumnAlignments(i)
-		     i = i + 1
-		 Next tableColumn
-		 '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
 
-		 objTable.PreferredWidth = 100 'Sets the Preferred Table width to 100% of the width of the page.
-
-	     Next objTable
-
-	 End Sub
-	```
