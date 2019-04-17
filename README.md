@@ -123,5 +123,31 @@ These statistics will also have been made available to those who needed access t
 * Again, these two steps just completed above only have to be performed once per publication, unless something would warrant a change in these areas of the publication in the future.
 
 
+## Routine steps performed every time a publication is produced using RMarkdown
+* Open the ISD-NATIONAL-STATS-REPORT.Rmd file in RStudio.
+* Run/Knit the RMarkdown file.
+
+	![Knit document example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic4.png)
+
+* Open the MS Word document (ISD-NATIONAL-STATS-REPORT.docx) that was just created.
+* Insert the Cover Page into the publication report. 
+	* Open ISD-NATIONAL-STATS-REPORT.docx. Go to *Insert – Cover Page*. Scroll down to the general section and select the cover page template you saved previously. Notice now that the text “Information Services Division” appears much lower than it should. To fix that, go to *Page Layout – Margins – Custom Margins*. Set the “Top” number as 0.62 cm. Now it should be back in the proper location.
+* Insert the Footer into the publication report. 
+	* Go to *Insert – Footer*. Scroll down to the general section and select the footer template you saved previously. Now the footer has been fully inserted into the document.
+* Set the Table Formatting Using the VBA Macro.
+	* Go to *View – Macros – View Macros*. Select the macro you saved previously, and click Run. Now all the tables in the output document should be nicely formatted.
+* Insert Table of Contents (TOC)
+	* We need to insert the TOC manually as we cannot find a way to insert it on a specific page in the RMarkdown script. **Please note: this step should only be done after running the macro setting the table formats!  Otherwise the formatting of the tables won’t be in the correct order!**
+	* Click on the end of last text line on the page “This is a National Publication” (page number 1).
+
+	![National Statistics](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown5.PNG)
+	
+	* Go to *Insert – Page Break*, so that a new blank page will be inserted.
+	* Go to *References – Table of Contents*. Choose Built-in template Automatic Table 1. Now the TOC has been fully inserted.
+
+Congratulations!  You have now completed creating a Word Publications National Stats Report Template from a RMarkdown template.  Feel free to play around with the RMarkdown file to see how the MS Word file changes in response to your modifications.
+
+	
+
 
 
