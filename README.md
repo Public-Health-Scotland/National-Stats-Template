@@ -2,7 +2,7 @@
 
 Basic R markdown template for producing summary and full report. 
 
-### Download the necessary files
+## Download the necessary files
 
 To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
 ![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
