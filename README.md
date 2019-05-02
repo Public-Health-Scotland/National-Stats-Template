@@ -1,6 +1,30 @@
-# How to Produce a Publication Report in Word using RMarkdown
+# How to Produce a Publication *Summary* in Word using RMarkdown
 
-Basic R markdown template for producing summary and full report. 
+The Word publication summary template can be found on the [geNSS page](http://genss.nss.scot.nhs.uk/portal/page?_pageid=515,3762523,515_4074020&_dad=portal&_schema=PORTAL).
+
+* To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
+![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
+* Go to the zip file, right click on it and choose *WinZip -> Extract to here*.
+* You should see the files that are below.
+
+	![Folder example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic2.PNG)
+
+	* The ISD-NATIONAL-STATS-SUMMARY.Rmd file is the **RMarkdown** file that you open in RStudio, modify as desired, and 	run/knit to create a Word file.  The final Word file will have the exact same name as this file except for the 	extension, which will be .docx.  So in this case, the new file being created will be named ISD-NATIONAL-STATS-SUMMARY.docx
+	* The ISD-NATIONAL-STATS-SUMMARY_TEMPLATE.docx file is the template used for ISD-NATIONAL-STATS-SUMMARY.Rmd
+* Open the ISD-NATIONAL-STATS-SUMMARY.Rmd file in RStudio.
+* Run/Knit the RMarkdown file.
+
+	![Knit document example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic5.PNG)
+
+* Open the MS Word document (ISD-NATIONAL-STATS-SUMMARY.docx) that was just created. Now you have got your summary!
+
+***
+
+***
+
+# How to Produce a Publication *Report* in Word using RMarkdown
+
+The Word publication report template can be found on the [geNSS page](http://genss.nss.scot.nhs.uk/portal/page?_pageid=515,3762523,515_4074020&_dad=portal&_schema=PORTAL).
 
 ## Download the necessary files
 
@@ -9,7 +33,7 @@ To download the necessary files, click on *Clone or download -> Download ZIP* an
 * Go to the zip file, right click on it and choose *WinZip -> Extract to here*.
 * You should see the files that are below.
 
-	![Folder example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic2.png)
+	![Folder example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic2.PNG)
 
 	* The ISD-NATIONAL-STATS-REPORT.Rmd file is the **RMarkdown** file that you open in RStudio, modify as desired, and 	run/knit to create a Word file.  The final Word file will have the exact same name as this file except for the 	extension, which will be .docx.  So in this case, the new file being created will be named ISD-NATIONAL-STATS-REPORT.docx
   	* The kitemark_tcm97-17949.jpg file is simply this image which RMarkdown will insert into the final MS Word Publications Report template:
