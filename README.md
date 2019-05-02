@@ -14,6 +14,14 @@ To download the necessary files, click on *Clone or download -> Download ZIP* an
 
 ***
 
+
+
+
+
+
+
+***
+
 # How to Produce a Publication Report in Word using RMarkdown
 
 
