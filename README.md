@@ -1,6 +1,20 @@
+# How to Produce a Publication Summary in Word using RMarkdown
+
+## Download the necessary files
+
+To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
+![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
+* Go to the zip file, right click on it and choose *WinZip -> Extract to here*.
+* You should see the files that are below.
+
+	![Folder example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic2.png)
+
+	* The ISD-NATIONAL-STATS-SUMMARY.Rmd file is the **RMarkdown** file that you open in RStudio, modify as desired, and 	run/knit to create a Word file.  The final Word file will have the exact same name as this file except for the 	extension, which will be .docx.  So in this case, the new file being created will be named ISD-NATIONAL-STATS-SUMMARY.docx
+	* The ISD-NATIONAL-STATS-SUMMARY_TEMPLATE.docx file is the template used for ISD-NATIONAL-STATS-SUMMARY.Rmd
+
+
 # How to Produce a Publication Report in Word using RMarkdown
 
-Basic R markdown template for producing summary and full report. 
 
 ## Download the necessary files
 
