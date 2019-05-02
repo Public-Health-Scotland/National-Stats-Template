@@ -1,6 +1,7 @@
 # How to Produce a Publication Summary in Word using RMarkdown
 
-* First download the necessary files. To do this click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
+* First download the necessary files. To do this click on *Clone or download -> Download ZIP* and save it 
+to the folder of your choice. 
 ![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
 * Go to the zip file, right click on it and choose *WinZip -> Extract to here*.
 * You should see the files that are below.
