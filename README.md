@@ -1,4 +1,4 @@
-# How to Produce a Publication Summary in Word using RMarkdown
+# How to Produce a Publication *Summary* in Word using RMarkdown
 
 * To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
 ![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
@@ -20,7 +20,7 @@
 
 ***
 
-# How to Produce a Publication Report in Word using RMarkdown
+# How to Produce a Publication *Report* in Word using RMarkdown
 
 
 ## Download the necessary files
