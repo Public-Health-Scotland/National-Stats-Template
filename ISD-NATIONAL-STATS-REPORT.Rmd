@@ -11,39 +11,27 @@ NHSBoard <- c("AA", "BR", "DG", "FF", "FV", "GR", "GGC", "HG", "LN", "LO", "NWTC
 
 Q2Cases <- as.character(c(22, 2, 9, 9, 10, 16, 52, 9, 22, 44, 0, 1, 0, 24, 1, 221))
 
-Q2Cases[16] <- "**221**"
-
 Q2BedDaysBase <- c(72081, 21517, 27799, 49932, 47432, 84310, 232889, 43682, 91535, 150550, 6566, 2401, 2590, 72783, 4870, 910937)
 
 Q2BedDays <- format(Q2BedDaysBase, big.mark = ",")
-
-Q2BedDays[16] <- "**910,937**"
 
 Q2RateBase <- c(30.5, 9.3, 32.4, 18.0, 21.1, 19.0, 22.3, 20.6, 24.0, 29.2, 0.0, 41.6, 0.0, 33.0, 20.5, 24.3)
 
 Q2Rate <- format(Q2RateBase, nsmall = 1)
 
-Q2Rate[16] <- "**24.3**"
-
 Q3Cases <- as.character(c(19, 6, 4, 10, 10, 30, 79, 16, 24, 36, 0, 1, 0, 22, 0, 257))
-
-Q3Cases[16] <- "**257**"
 
 Q3BedDaysBase <- c(69082, 19603, 27097, 47691, 50473, 76321, 206241, 42439, 87927, 148176, 7091, 2194, 2257, 70267, 4632, 861491)
 
 Q3BedDays <- format(Q3BedDaysBase, big.mark = ",")
 
-Q3BedDays[16] <- "**861,491**"
-
 Q3RateBase <- c(27.5, 30.6, 14.8, 21.0, 19.8, 39.3, 38.3, 37.7, 27.3, 24.3, 0.0, 45.6, 0.0, 31.3, 0.0, 29.8)
 
 Q3Rate <- format(Q3RateBase, nsmall = 1)
 
-Q3Rate[16] <- "**29.8**"
+TableData <- data.frame(NHSBoard, Q2Cases, Q2BedDays, Q2Rate, Q3Cases, Q3BedDays, Q3Rate, stringsAsFactors = FALSE)
 
-TableData <- data.frame(NHSBoard, Q2Cases, Q2BedDays, Q2Rate, Q3Cases, Q3BedDays, Q3Rate)
-
-# TableData[16, c(2:7)] <- c("**221**", "**910,937**", "**24.3**", "**257**", "**861,491**", "**29.8**")
+TableData[16, c(2:7)] <- c("**221**", "**910,937**", "**24.3**", "**257**", "**861,491**", "**29.8**")
 ```
 
 ```{r Figures, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
@@ -81,9 +69,7 @@ FigureOne <- ggplot(data = FigureOneData, aes(x = HBR, y = UptakeRate, fill = HB
                                "#0391BF", "#092869", "#0391BF", "#0391BF", "#0391BF")) +
   xlab("NHS Board of Residence") + ylab("Uptake rate (%)")
 
-#Figure1_filename <- paste0(output_report_filepath, "/Figure1_ggplot.png") 
-
-ggsave("Figure1_ggplot.png", plot = FigureOne, width = 17.78, height = 14.24, units = "cm", 
+ggsave("Figure1_ggplot.png", plot = FigureOne, width = 17.79, height = 14.24, units = "cm", 
        device = "png", dpi = 600)
 
 #Create Figure 2
@@ -106,8 +92,6 @@ FigureTwo <- ggplot(data = FigureTwoData, aes(x = RollingYear, y = DetectionRate
     axis.title.y = element_text(size = 12, face = "bold"),
     axis.text = element_text(size = 12)) +
   xlab("Three Year Rolling Period") + ylab("Cancer detection rate \n (per 1000 women screened)")
-  
-#Figure2_filename <- paste0(output_report_filepath, "/Figure2_ggplot.png")
 
 ggsave("Figure2_ggplot.png", plot = FigureTwo, width = 17.78, height = 14.24, units = "cm", 
        device = "png", dpi = 600)
@@ -115,7 +99,7 @@ ggsave("Figure2_ggplot.png", plot = FigureTwo, width = 17.78, height = 14.24, un
 
 ```{r ListofTables, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 ## Automated method for adding file names and sizes
-#file_list <- list.files(output_datafile_filepath)#
+
 file_list <- list.files()#test this to see if it works!
 paths <- c()
 sizeskb <- c()
