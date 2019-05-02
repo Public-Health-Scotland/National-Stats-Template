@@ -1,5 +1,7 @@
 # How to Produce a Publication *Summary* in Word using RMarkdown
 
+The Word publication summary template can be found on the [geNSS page](http://genss.nss.scot.nhs.uk/portal/page?_pageid=515,3762523,515_4074020&_dad=portal&_schema=PORTAL).
+
 * To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
 ![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
 * Go to the zip file, right click on it and choose *WinZip -> Extract to here*.
@@ -22,6 +24,7 @@
 
 # How to Produce a Publication *Report* in Word using RMarkdown
 
+The Word publication report template can be found on the [geNSS page](http://genss.nss.scot.nhs.uk/portal/page?_pageid=515,3762523,515_4074020&_dad=portal&_schema=PORTAL).
 
 ## Download the necessary files
 
