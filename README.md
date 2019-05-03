@@ -1,3 +1,13 @@
+# Table of contents
+* [How to Produce a Publication Summary in Word using RMarkdown](#how-to-produce-a-publication-summmary-in-word-using-rmarkdown)
+* [How to Produce a Publication Report in Word using RMarkdown](#how-to-produce-a-publication-report-in-word-using-rmarkdown)
+  * [Download the necessary files](#download-the-necessary-files)
+  * [One-time preparation steps for each user](#one-time-preparation-steps-for-each-user)
+  * [One-time preparation steps for each publication report](#one-time-preparation-steps-for-each-publication-report)
+  * [Routine steps performed every time a publication is produced using RMarkdown](#routine-steps-performed-every-time-a-publication-is-produced-using-rmarkdown)
+
+***
+
 # How to Produce a Publication *Summary* in Word using RMarkdown
 
 The Word publication summary template can be found on the [geNSS page](http://genss.nss.scot.nhs.uk/portal/page?_pageid=515,3762523,515_4074020&_dad=portal&_schema=PORTAL).
