@@ -6,7 +6,7 @@
   * [One-time preparation steps for each publication report](#one-time-preparation-steps-for-each-publication-report)
   * [Routine steps performed every time a publication is produced using RMarkdown](#routine-steps-performed-every-time-a-publication-is-produced-using-rmarkdown)
   
-If you have any questions about using the template, please contact the ![transforming publishing mailbox](nss.isdtransformingpublishing@nhs.net) 
+If you have any questions about using the template, please contact the [transforming publishing mailbox](nss.isdtransformingpublishing@nhs.net) 
 
 ***
 
