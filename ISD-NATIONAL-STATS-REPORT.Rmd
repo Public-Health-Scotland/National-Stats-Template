@@ -99,25 +99,30 @@ ggsave("Figure2_ggplot.png", plot = FigureTwo, width = 17.78, height = 14.24, un
 
 ```{r ListofTables, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 ## Automated method for adding file names and sizes
+# get list of files for the publication
+file_list <- list.files() 
 
-file_list <- list.files()#test this to see if it works!
-paths <- c()
-sizeskb <- c()
-file_name <- c()
-file_size <- c()
+# create empty vector for the loop
+nas <- replicate(length(file_list), NA)
+paths <- nas 
+sizeskb <- nas 
+file_name <- nas 
+file_size <- nas
 
+# This loop loops through the files in the publication folder
 for (i in 1:length(file_list)){
-  #paths[i] <- paste0(output_datafile_filepath,"/", file_list[i])
-  paths[i] <- file_list[i] #test this to see if it works!
-  sizeskb[i] <- round(file.size(paths[i]) / 1024)
-  text <- unlist(strsplit(file_list[i], ".", fixed = TRUE))
-  file_name[i] <- text[1]
-  #if(toupper(substring(text[2], 1, 3)) == "XLS") {
-  if((!is.na(text[2])) & toupper(substring(text[2], 1, 3)) == "XLS") { #The is.na was added for cases where a folder is present, since it won't have an extension.
-    file_size[i] <- paste0("Excel ", sizeskb[i], " Kb")
-  } else {
+ 
+  paths[i] <- file_list[i]  # store filename (with extension included) in vector paths 
+  sizeskb[i] <- round(file.size(paths[i]) / 1024) # get file size and store as Kb in vector sizeskb   
+  text <- unlist(strsplit(file_list[i], ".", fixed = TRUE)) # split filename in name and extension 
+  file_name[i] <- text[1] # store the name in the vector file_name
+  
+  # if file extension is XLS or XLSX rename to Excel, else keep extension as is 
+  if((!is.na(text[2])) & toupper(substring(text[2], 1, 3)) == "XLS") { # The is.na was added for cases where a folder is present, since it won't have an extension.
+    file_size[i] <- paste0("Excel ", sizeskb[i], " Kb") 
+  } else if (!is.na(text[2])) {
     file_size[i] <- paste0(toupper(text[2]), " ",sizeskb[i]," Kb")
-  }
+  } 
 }
 
 ListofTables <- data.frame(file_name, file_size)
