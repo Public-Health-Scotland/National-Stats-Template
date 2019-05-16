@@ -38,9 +38,9 @@ If you have any questions about using the template, please contact the transform
 
 ## Download the necessary files
 
-To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
+* To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
 ![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
-* Go to the zip file, right click on it and choose *WinZip -> Extract to here*.
+* Go to the zip file and unzip it (e.g. If you have WinZip, right click on it and choose *WinZip -> Extract to here*).
 * You should see the files that are below.
 
 	![Folder example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic2.PNG)
