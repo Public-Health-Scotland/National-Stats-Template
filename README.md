@@ -6,23 +6,23 @@
   * [One-time preparation steps for each publication report](#one-time-preparation-steps-for-each-publication-report)
   * [Routine steps performed every time a publication is produced using RMarkdown](#routine-steps-performed-every-time-a-publication-is-produced-using-rmarkdown)
   
+The RMarkdown scripts will reproduce the National Statistics Publication templates (both summary and report), which can be found on the [geNSS page](http://genss.nss.scot.nhs.uk/portal/page?_pageid=515,3762523,515_4074020&_dad=portal&_schema=PORTAL).
+
 If you have any questions about using the template, please contact the transforming publishing mailbox (nss.isdtransformingpublishing@nhs.net).
 
 ***
 
 # How to Produce a Publication *Summary* in Word using RMarkdown
 
-The Word publication summary template can be found on the [geNSS page](http://genss.nss.scot.nhs.uk/portal/page?_pageid=515,3762523,515_4074020&_dad=portal&_schema=PORTAL).
-
 * To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
 ![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
-* Go to the zip file, right click on it and choose *WinZip -> Extract to here*.
+* Go to the zip file and unzip it (e.g. If you have WinZip, right click on it and choose *WinZip -> Extract to here*).
 * You should see the files that are below.
 
 	![Folder example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic2.PNG)
 
 	* The ISD-NATIONAL-STATS-SUMMARY.Rmd file is the **RMarkdown** file that you open in RStudio, modify as desired, and 	run/knit to create a Word file.  The final Word file will have the exact same name as this file except for the 	extension, which will be .docx.  So in this case, the new file being created will be named ISD-NATIONAL-STATS-SUMMARY.docx
-	* The ISD-NATIONAL-STATS-SUMMARY_TEMPLATE.docx file is the template used for ISD-NATIONAL-STATS-SUMMARY.Rmd
+	* The NATIONAL_STATS_SUMMARY_TEMPLATE.docx file is the template used for ISD-NATIONAL-STATS-SUMMARY.Rmd
 * Open the ISD-NATIONAL-STATS-SUMMARY.Rmd file in RStudio.
 * Run/Knit the RMarkdown file.
 
@@ -35,8 +35,6 @@ The Word publication summary template can be found on the [geNSS page](http://ge
 ***
 
 # How to Produce a Publication *Report* in Word using RMarkdown
-
-The Word publication report template can be found on the [geNSS page](http://genss.nss.scot.nhs.uk/portal/page?_pageid=515,3762523,515_4074020&_dad=portal&_schema=PORTAL).
 
 ## Download the necessary files
 
@@ -52,7 +50,7 @@ To download the necessary files, click on *Clone or download -> Download ZIP* an
   
   		![Kitemark](https://github.com/NHS-NSS-transforming-publications/RMarkdown_Basic/blob/master/kitemark_tcm97-17949.jpg)
 	
-  * The ISD-NATIONAL-STATS-REPORT_TEMPLATE.docx file is the file in which you set styles for headings and tables. The RMarkdown file will import the styles, but not the content of this file. You ideally shouldn’t need to modify this since we’ve already set the styles, but this is the file you would change if you wanted to change them.
+  * The NATIONAL_STATS_REPORT_TEMPLATE.docx file is the file in which you set styles for headings and tables. The RMarkdown file will import the styles, but not the content of this file. You ideally shouldn’t need to modify this since we’ve already set the styles, but this is the file you would change if you wanted to change them.
   *	The Cover_Page.docx file is used to import a custom cover page and a custom footer into the user’s settings.  This file is no longer needed and can be erased after those steps are completed.
 
 ## One-time preparation steps for each user
@@ -69,7 +67,7 @@ Open the Cover_Page.docx file in Word.
 	
   	* Then go to *Insert – Footer – Save Selection to Footer Gallery*. Give it a name (e.g. ISD_Publication_Footer) and click OK.
 	
-* Save the VBA macro:
+* Save the VBA macro (this macro will be later used to set the table styles in Word):
 	* Go to *View – Macros – View Macros*. Type the macro name you want to save this as (e.g. SetStyleOfTables) and click Create. It will open up the VBA developer window.
 	* Copy the following code to the developer window and click the Save button to save the macro.
 	
