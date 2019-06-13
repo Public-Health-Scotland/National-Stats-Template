@@ -132,7 +132,7 @@ Sub SetStyleOfAllTablesAndPreserveAlignment()
 * Close the Cover_Page.docx file in Word. There will be a dialogue box like this:
 ![Saving building blocks](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic6.PNG)
 You should click "Yes" so that the cover page and footer can be properly saved in the gallery.
-* You can delete the file Cover_Page.docx as this is no longer needed
+* You can delete the file Cover_Page.docx as this is no longer needed.
 
 ## One-time preparation steps for each publication report
 
