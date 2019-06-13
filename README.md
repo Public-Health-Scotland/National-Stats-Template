@@ -1,4 +1,4 @@
-# Table of contents
+# Table of Contents
 * [How to Produce a Publication Summary in Word using RMarkdown](#how-to-produce-a-publication-summmary-in-word-using-rmarkdown)
 * [How to Produce a Publication Report in Word using RMarkdown](#how-to-produce-a-publication-report-in-word-using-rmarkdown)
   * [Download the necessary files](#download-the-necessary-files)
@@ -129,8 +129,10 @@ Sub SetStyleOfAllTablesAndPreserveAlignment()
 ```
 
 * These three steps of saving the VBA macro, saving the footer, and saving the cover page should only have to be done once ever for each user.  The macro, footer, and cover page should now be associated with the user’s Word setup and not with any particular Word file.  
-* Close the Cover_Page.docx file in Word.
-* Delete the file Cover_Page.docx as this is no longer needed
+* Close the Cover_Page.docx file in Word. There will be a dialogue box like this:
+![Saving building blocks](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic6.PNG)
+You should click "Yes" so that the cover page and footer can be properly saved in the gallery.
+* You can delete the file Cover_Page.docx as this is no longer needed.
 
 ## One-time preparation steps for each publication report
 
