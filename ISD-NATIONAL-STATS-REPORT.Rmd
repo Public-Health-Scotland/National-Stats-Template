@@ -207,7 +207,22 @@ MetaData <- data.frame(Indicator, Description)
 <br>
 
 National Statistics status means that the official statistics meet the highest standards of trustworthiness, quality and public value. They are identified by the quality mark shown above.
-They comply with the Code of Practice for statistics and are awarded National Statistics status following an assessment by the UK Statistics Authority's regulatory arm. The Authority considers whether the statistics meet the highest standards of Code compliance, including the value they add to public decisions and debate.
+
+<br>
+
+The UK Statistics Authority has designated these statistics as National Statistics signifying compliance with the Code of Practice for Statistics.
+
+<br>
+
+Once statistics have been designated as National Statistics, it is a statutory requirement that the Code of Practice shall continue to be observed.
+
+<br>
+
+The statistics last underwent a full [assessment](https://www.statisticsauthority.gov.uk/archive/assessment/assessment/assessment-reports/confirmation-of-designation-letters/letter-of-confirmation-as-national-statistics---assessment-report-177.pdf) by the Office for Statistics Regulation (OSR) against the Code of Practice in June 2019. The OSR is the regulatory arm of the UK Statistics Authority.
+
+<br>
+
+The continued designation of these statistics as National Statistics was confirmed in June 2019 following a compliance check by the Office for Statistics Regulation. The [compliance check report](https://www.statisticsauthority.gov.uk/correspondence/compliance-check-on-home-offices-statistics-on-immigration/) highlighted a number of strengths and made suggestions for improvements.
 
 <br>
 
