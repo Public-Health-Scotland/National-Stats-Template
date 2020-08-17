@@ -15,18 +15,18 @@ If you have any questions about using the template, please contact the transform
 # How to Produce a Publication *Summary* in Word using RMarkdown
 
 * To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
-![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
+![Download zip example](https://github.com/public-health-scotland/Images/blob/master/RMarkdown7.PNG)
 * Go to the zip file and unzip it (e.g. If you have WinZip, right click on it and choose *WinZip -> Extract to here*).
 * You should see the files that are below.
 
-	![Folder example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic2.PNG)
+	![Folder example](https://github.com/public-health-scotland/Images/blob/master/RMarkdown_Basic2.PNG)
 
 	* The ISD-NATIONAL-STATS-SUMMARY.Rmd file is the **RMarkdown** file that you open in RStudio, modify as desired, and 	run/knit to create a Word file.  The final Word file will have the exact same name as this file except for the 	extension, which will be .docx.  So in this case, the new file being created will be named ISD-NATIONAL-STATS-SUMMARY.docx
 	* The NATIONAL_STATS_SUMMARY_TEMPLATE.docx file is the template used for ISD-NATIONAL-STATS-SUMMARY.Rmd
 * Open the ISD-NATIONAL-STATS-SUMMARY.Rmd file in RStudio.
 * Run/Knit the RMarkdown file.
 
-	![Knit document example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown_Basic5.PNG)
+	![Knit document example](https://github.com/public-health-scotland/Images/blob/master/RMarkdown_Basic5.PNG)
 
 * Open the MS Word document (ISD-NATIONAL-STATS-SUMMARY.docx) that was just created. Now you have got your summary!
 
@@ -39,7 +39,7 @@ If you have any questions about using the template, please contact the transform
 ## Download the necessary files
 
 * To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
-![Download zip example](https://github.com/NHS-NSS-transforming-publications/Images/blob/master/RMarkdown7.PNG)
+![Download zip example](https://github.com/public-health-scotland/Images/blob/master/RMarkdown7.PNG)
 * Go to the zip file and unzip it (e.g. If you have WinZip, right click on it and choose *WinZip -> Extract to here*).
 * You should see the files that are below.
 
