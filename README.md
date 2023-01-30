@@ -14,8 +14,10 @@ If you have any questions about using the template, please contact the transform
 
 # How to Produce a Publication *Summary* in Word using RMarkdown
 
-* To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice. 
+* To download the necessary files, click on *Clone or download -> Download ZIP* and save it to the folder of your choice.
+
 ![Download zip example](https://github.com/public-health-scotland/Images/blob/master/RMarkdown7.PNG)
+
 * Go to the zip file and unzip it (e.g. If you have WinZip, right click on it and choose *WinZip -> Extract to here*).
 * You should see the files that are below.
 
